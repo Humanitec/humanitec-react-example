@@ -1,3 +1,3 @@
 # Humanitec react example
 
-- a simple react application that is connected to Humanitec with github actions
+- a simple boilerplate react application to connect to Humanitec using Github actions

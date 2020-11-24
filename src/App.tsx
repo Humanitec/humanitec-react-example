@@ -1,7 +1,8 @@
 import React from 'react';
+import { windowEnv } from '@src/environment';
 
 const App = () => {
-  return <div>Test</div>;
+  return <div>{windowEnv.API_URL}</div>;
 };
 
 export default App;

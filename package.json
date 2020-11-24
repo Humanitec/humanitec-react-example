@@ -1,0 +1,70 @@
+{
+  "name": "humanitec-react-example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/node": "12.7.4",
+    "@types/react-dom": "16.9.0",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.4",
+    "react-scripts": "^3.4.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.0"
+  },
+  "scripts": {
+    "start": "chmod +x ./init-env.sh && bash ./init-env.sh && cp env-config.js ./public/ && craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "test:tsc": "tsc -p tsconfig.test.json -w",
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/tslint/bin/tslint -c tslint.json --fix 'src/**/*.ts*'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^5.5.0",
+    "@types/jest": "^26.0.9",
+    "@types/react": "^16.9.2",
+    "craco-alias": "^1.0.4",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.3.0",
+    "prettier": "^1.19.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-test-renderer": "^16.13.1",
+    "ts-jest": "^26.3.0",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint"
+    ],
+    "*.{js,ts,tsx,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

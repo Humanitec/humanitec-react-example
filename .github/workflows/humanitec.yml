@@ -1,0 +1,26 @@
+name: Deploy to Humanitec
+
+on:
+  push:
+    branches:
+      - '**'
+     tags:
+      - '**'
+
+jobs:
+  build-image-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build and Push to Humanitec
+      uses: humanitec/build-push-to-humanitec@v1
+      with:
+        humanitec-token: ${{ secrets.HUMANITEC_TOKEN }}
+        organization: humanitec-labs
+
+    - name: Slack Notification
+      uses: kpritam/slack-job-status-action@v1
+      with:
+        job-status: ${{ job.status }}
+        slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
+        channel: walhall-notifications

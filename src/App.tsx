@@ -15,9 +15,13 @@ const App = () => {
     <AppWrapper>
       <h2> Environment Variables </h2>
       <ul>
-        <li>
-          API_URL: <EnvVariableValue>{windowEnv.API_URL}</EnvVariableValue>
-        </li>
+        {Object.entries(windowEnv).map(([key, value]: any) => {
+          return (
+            <li key={key}>
+              {key} : <EnvVariableValue>{value}</EnvVariableValue>
+            </li>
+          );
+        })}
       </ul>
     </AppWrapper>
   );

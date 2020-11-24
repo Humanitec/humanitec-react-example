@@ -17,10 +17,3 @@ jobs:
       with:
         humanitec-token: ${{ secrets.HUMANITEC_TOKEN }}
         organization: azizdemo
-
-    - name: Slack Notification
-      uses: kpritam/slack-job-status-action@v1
-      with:
-        job-status: ${{ job.status }}
-        slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
-        channel: walhall-notifications

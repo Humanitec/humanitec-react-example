@@ -19,7 +19,6 @@ const EnvVariable = styled.li`
   margin: 10px 0;
   padding: 10px 8px;
   list-style: none;
-  margin-bottom: 10px;
 `;
 
 const EnvVariableValue = styled.span`

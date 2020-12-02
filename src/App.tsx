@@ -23,6 +23,7 @@ const EnvVariable = styled.li`
 
 const EnvVariableValue = styled.span`
   font-size: 14px;
+  margin-left: 15px;
 `;
 
 const App = () => {

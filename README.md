@@ -4,6 +4,7 @@
 
 # Steps to use this application in Humanitec
 
-- Fork the repo
-- Connect github-actions to Humanitec: you can find instructions under organization settings -> images -> click on the github actions button
-- Under the create new workload tile in the application view select "react-example" image from the dropdown
+- Fork the repo.
+- Connect github-actions to Humanitec: you can find instructions under organization settings -> images -> click on the github actions button.
+- Push initial commit.
+- Under the create new workload tile in the application view select "react-example" image from the dropdown.
